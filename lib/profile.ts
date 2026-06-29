@@ -9,13 +9,13 @@ export const profile = {
   // Two-sentence intro, kept terse and specific — no buzzword filler.
   intro: [
     "I build backends in Java and Spring Boot — secure REST APIs, event-driven pipelines on Apache Kafka, and distributed systems backed by Redis and MongoDB.",
-    "I care about the parts that don't show up in a screenshot: ordering guarantees, cache correctness, container builds, and what happens under load.",
+    "I care about the parts that don't show up in a screenshot : ordering guarantees, cache correctness, container builds, and what happens under load.",
   ],
 
   email: "ompraveer@gmail.com",
   phone: "+91-7017264484",
 
-  // TODO(om): replace the placeholder handles with your real profile URLs.
+
   links: {
     github: "https://github.com/OmiKat",
     linkedin: "https://www.linkedin.com/in/ompraveer-sharan-bbb398243/",
