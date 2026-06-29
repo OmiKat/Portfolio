@@ -23,6 +23,21 @@ export async function generateMetadata({
   return {
     title: project.title,
     description: project.summary,
+    keywords: [
+      "Om Praveer Sharan",
+      "Ompraveer Sharan",
+      "backend developer",
+      ...project.stack,
+      project.title,
+    ],
+    alternates: {
+      canonical: `https://ompraveer.10xdevs.in/work/${slug}`,
+    },
+    openGraph: {
+      title: `${project.title} — Om Praveer Y Sharan`,
+      description: project.summary,
+      url: `https://ompraveer.10xdevs.in/work/${slug}`,
+    },
   };
 }
 

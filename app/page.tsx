@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { Rule } from "@/components/Rule";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -5,6 +6,11 @@ import { ProjectRow } from "@/components/ProjectRow";
 import { MonoLabel } from "@/components/MonoLabel";
 import { projects } from "@/lib/projects";
 import { profile, skills, education, achievements } from "@/lib/profile";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://ompraveer.10xdevs.in/" },
+  openGraph: { url: "https://ompraveer.10xdevs.in/" },
+};
 
 export default function Home() {
   return (
