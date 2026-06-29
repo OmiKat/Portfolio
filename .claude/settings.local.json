@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bun --version)",
+      "Bash(npx --yes create-next-app@latest . --ts --tailwind --app --src-dir=false --import-alias \"@/*\" --no-eslint --turbopack --use-npm --yes)",
+      "Bash(npx --yes create-next-app@latest portfolio-tmp --ts --tailwind --app --src-dir=false --import-alias \"@/*\" --no-eslint --turbopack --use-npm --yes)",
+      "Bash(npm run *)",
+      "Bash(curl -s localhost:3000)",
+      "Bash(curl -s localhost:3000/work/wanderly)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" localhost:3000/work/nope)",
+      "Read(//tmp/**)",
+      "Bash(google-chrome-stable --headless --disable-gpu --no-sandbox --hide-scrollbars --window-size=1280,2400 --screenshot=/tmp/portfolio-home.png http://localhost:3000)",
+      "Bash(google-chrome-stable --headless --disable-gpu --no-sandbox --hide-scrollbars --window-size=1280,2000 --screenshot=/tmp/portfolio-work.png http://localhost:3000/work/gaming-event-streaming-platform)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(pkill -f \"next-server\")"
+    ]
+  }
+}

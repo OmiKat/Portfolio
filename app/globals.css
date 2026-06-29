@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/*
+  Editorial / Swiss design tokens.
+  Flat palette only — no gradients, no decorative shadows, no blur.
+  Depth comes from 1px hairline rules and whitespace.
+*/
+@theme {
+  --color-paper: #f6f5f1;
+  --color-ink: #18181b;
+  --color-muted: #6b6b66;
+  --color-hairline: #dad8d0;
+  --color-accent: #b5341f;
+
+  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, "SF Mono", monospace;
+
+  /* Responsive display scale */
+  --text-display: clamp(2.75rem, 1.4rem + 6vw, 6rem);
+  --text-display--line-height: 0.98;
+  --text-display--letter-spacing: -0.02em;
+
+  --text-title: clamp(1.75rem, 1rem + 3vw, 3rem);
+  --text-title--line-height: 1.05;
+  --text-title--letter-spacing: -0.015em;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv01";
+  text-rendering: optimizeLegibility;
+}
+
+/* Mono metadata label: small caps-ish, tracked out, muted. */
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+/* Links: ink with an accent underline that thickens on hover. */
+.link {
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: text-decoration-thickness 120ms ease;
+}
+.link:hover {
+  text-decoration-thickness: 2px;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-paper);
+}
