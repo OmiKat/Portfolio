@@ -26,7 +26,7 @@ export const profile = {
 } as const;
 
 export const skills: { group: string; items: string[] }[] = [
-  { group: "Languages", items: ["Java", "C++"] },
+  { group: "Languages", items: ["Java", "C++" , "Python"] },
   {
     group: "Backend",
     items: [

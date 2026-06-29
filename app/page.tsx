@@ -61,7 +61,7 @@ export default function Home() {
       <Container>
         <section className="grid grid-cols-1 gap-6 py-12 md:grid-cols-12">
           <div className="md:col-span-2">
-            <MonoLabel>About</MonoLabel>
+            <MonoLabel>About Me</MonoLabel>
           </div>
           <div className="md:col-span-10 max-w-2xl space-y-4 text-xl leading-relaxed">
             {profile.intro.map((line) => (
@@ -76,7 +76,7 @@ export default function Home() {
       {/* 01 — Selected Work */}
       <Container>
         <section className="pt-12">
-          <SectionHeader index="01" title="Selected Work" />
+          <SectionHeader index="01" title="Projects" />
           <div className="mt-6 divide-y divide-hairline">
             {projects.map((project, i) => (
               <ProjectRow
@@ -177,7 +177,7 @@ export default function Home() {
               Download résumé (PDF)
             </a>
             <span className="text-muted">
-              {profile.name} · 2026
+              {profile.name} · 2024
             </span>
           </div>
         </footer>

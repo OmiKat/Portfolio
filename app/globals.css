@@ -25,6 +25,30 @@
   --text-title--letter-spacing: -0.015em;
 }
 
+/* Dark palette — same hue family, inverted. Accent stays identical. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-paper: #18181b;
+    --color-ink: #f0ede6;
+    --color-muted: #8a8a82;
+    --color-hairline: #2e2e2e;
+  }
+}
+
+[data-theme="dark"] {
+  --color-paper: #18181b;
+  --color-ink: #f0ede6;
+  --color-muted: #8a8a82;
+  --color-hairline: #2e2e2e;
+}
+
+[data-theme="light"] {
+  --color-paper: #f6f5f1;
+  --color-ink: #18181b;
+  --color-muted: #6b6b66;
+  --color-hairline: #dad8d0;
+}
+
 html {
   -webkit-text-size-adjust: 100%;
 }
@@ -35,6 +59,7 @@ body {
   font-family: var(--font-sans);
   font-feature-settings: "ss01", "cv01";
   text-rendering: optimizeLegibility;
+  transition: background 200ms ease, color 200ms ease;
 }
 
 /* Mono metadata label: small caps-ish, tracked out, muted. */

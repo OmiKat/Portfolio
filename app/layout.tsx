@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Archivo, IBM_Plex_Mono } from "next/font/google";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import "./globals.css";
 
 const archivo = Archivo({
@@ -18,7 +19,7 @@ const plexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://ompraveer.10xdevs.in/"),
   title: {
-    default: "Om Praveer Y Sharan — Backend Developer",
+    default: "OPYS",
     template: "%s — Om Praveer Y Sharan",
   },
   description:
@@ -69,7 +70,12 @@ export default function RootLayout({
       lang="en"
       className={`${archivo.variable} ${plexMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <div className="fixed top-4 right-6 z-50">
+          <ThemeToggle />
+        </div>
+        {children}
+      </body>
     </html>
   );
 }
