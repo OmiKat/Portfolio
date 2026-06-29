@@ -16,7 +16,7 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ompraveer.dev"),
+  metadataBase: new URL("https://ompraveer.10xdevs.in/"),
   title: {
     default: "Om Praveer Y Sharan",
     template: "%s — Om Praveer Y Sharan",
