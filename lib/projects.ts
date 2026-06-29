@@ -28,7 +28,7 @@ export const projects: Project[] = [
     stack: ["Java", "Spring Boot", "Apache Kafka", "Redis", "MongoDB", "Docker"],
     links: {
       // TODO(om): real repo URL.
-      github: "https://github.com/ompraveer/gaming-event-streaming",
+      github: "https://github.com/OmiKat/EventStreaming",
     },
     problem:
       "Games emit a firehose of events — kills, achievements, level-ups — and clients can't wait on a database write to acknowledge each one. The platform had to accept events fast, never lose or reorder a player's events, and still answer 'top players right now' in real time.",
@@ -62,8 +62,8 @@ export const projects: Project[] = [
     stack: ["Java", "Spring Boot", "PostgreSQL", "Redis", "Groq API", "Docker"],
     links: {
       // TODO(om): real repo + live URLs.
-      github: "https://github.com/ompraveer/wanderly",
-      site: "https://wanderly.example.com",
+      github: "https://github.com/OmiKat/TravelAi",
+      site: "https://wanderly-black.vercel.app/",
     },
     problem:
       "Trip planning means calling an LLM, which is slow and expensive and returns free-form text. The goal was a clean monolith that could grow into services later, with LLM responses that map straight onto typed Java objects — and a cache so the same request doesn't pay the AI tax twice.",
@@ -90,6 +90,37 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "task-tracking-app-backend",
+    title: "Task Tracking App Backend",
+    year: "2025",
+    role: "Backend",
+    summary:
+      "RESTful task management API with task lists, typed status/priority enums, and DTO-based data mapping over PostgreSQL.",
+    stack: ["Java", "Spring Boot", "Spring Data JPA", "PostgreSQL", "Lombok", "Maven"],
+    links: {
+      github: "https://github.com/OmiKat/TaskAppBackend",
+    },
+    problem:
+      "Task management apps need a clean way to group tasks into lists, track state transitions (pending → in-progress → done), and expose a typed API that doesn't leak internal entity structure to clients.",
+    architecture: `client ──▶ TaskListController / TaskController
+                      │
+              Service layer (business logic)
+                      │
+              JPA Repository  ──▶  PostgreSQL
+                      │
+              Mapper (Entity ↔ DTO)
+                      │
+         Enum-constrained fields
+       (status: PENDING | IN_PROGRESS | DONE
+        priority: LOW | MEDIUM | HIGH)`,
+    decisions: [
+      "Separate TaskList and Task into distinct controllers so list-level and item-level concerns don't bleed into each other.",
+      "Use Enums for status and priority fields to enforce valid states at the type level rather than validating free-form strings at runtime.",
+      "Introduce a Mapper layer to convert between JPA entities and DTOs, keeping internal schema changes from breaking the API contract.",
+      "Load credentials via dotenv-java so the same binary runs locally with a .env file and in prod with real environment variables — no config changes needed.",
+    ],
+  },
+  {
     slug: "blog-application-backend",
     title: "Blog Application Backend",
     year: "2024",
@@ -106,7 +137,7 @@ export const projects: Project[] = [
     ],
     links: {
       // TODO(om): real repo URL.
-      github: "https://github.com/ompraveer/blog-backend",
+      github: "https://github.com/OmiKat/BlogBackend",
     },
     problem:
       "A blog platform needs two audiences with very different rights: readers and admins. The backend had to enforce that split cleanly, manage posts/categories/tags dynamically, and stay easy for another developer to pick up and test.",

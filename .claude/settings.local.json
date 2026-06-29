@@ -12,7 +12,8 @@
       "Bash(google-chrome-stable --headless --disable-gpu --no-sandbox --hide-scrollbars --window-size=1280,2400 --screenshot=/tmp/portfolio-home.png http://localhost:3000)",
       "Bash(google-chrome-stable --headless --disable-gpu --no-sandbox --hide-scrollbars --window-size=1280,2000 --screenshot=/tmp/portfolio-work.png http://localhost:3000/work/gaming-event-streaming-platform)",
       "Bash(pkill -f \"next dev\")",
-      "Bash(pkill -f \"next-server\")"
+      "Bash(pkill -f \"next-server\")",
+      "WebFetch(domain:github.com)"
     ]
   }
 }

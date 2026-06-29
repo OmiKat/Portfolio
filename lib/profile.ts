@@ -17,8 +17,8 @@ export const profile = {
 
   // TODO(om): replace the placeholder handles with your real profile URLs.
   links: {
-    github: "https://github.com/ompraveer",
-    linkedin: "https://www.linkedin.com/in/ompraveer",
+    github: "https://github.com/OmiKat",
+    linkedin: "https://www.linkedin.com/in/ompraveer-sharan-bbb398243/",
     leetcode: "https://leetcode.com/ompraveer",
   },
 
